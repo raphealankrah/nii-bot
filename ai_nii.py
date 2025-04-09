@@ -38,7 +38,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     )
 
     await update.message.reply_text(
-        "Hi, I am Ai-Nii and this is my profile."
+        "Hi, I am [name] and this is my profile."
         " How may I help you today?",
         reply_markup=markup,
     )
@@ -50,7 +50,7 @@ async def regular_choice(update: Update, context: ContextTypes.DEFAULT_TYPE) -> 
     context.user_data["choice"] = text
 
     if text == "How I work?":
-        await update.message.reply_text("Here's how I work, as an Ai assistant - my job is to help you identify the kind of work you want done. Additionally, I will then forward your directives to the agency")
+        await update.message.reply_text("Here's how I work, as a creative assistant - my job is to help you identify the kind of work you want done. Additionally, I will then forward your directives to the agency")
     elif text == "See Our Work":
         await show_portfolio(update, context)
     elif text == "Hire A Designer":
